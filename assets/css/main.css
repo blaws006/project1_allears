@@ -117,8 +117,10 @@ input:checked + .slider:before {
 }
 
 .chat-room-secondary {
-  max-width: 400px;
+  max-width: 300px;
      background-color: rgba(0, 0, 0, 0.5);
+  max-height: 300px;
+  padding: 0;
 } 
 
 .chat-image-main {
@@ -140,4 +142,18 @@ input:checked + .slider:before {
   position: relative;
   bottom: 125px;
   width: 50px;
+}
+
+.chat-image-secondary {
+  
+  max-width: 150px;
+  
+}
+
+.button-second {
+  
+  width: 30px;
+  
+  position: relative;
+  bottom: 75px;
 }
