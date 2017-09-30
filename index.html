@@ -57,15 +57,14 @@
 	</nav>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
+   
+      <div class="container jumbotron create-chat">
         <h1 class="display-3">All Ears</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p>
          <button type="button" class="btn btn-primary btn-lg buttonShowModal" data-toggle="modal" data-target="#myModal">New Groove Room</button> 
-    </p>
+        </p>
       </div>
-    </div>
 
   
 <!-- Create Groove Room Modal -->
@@ -86,7 +85,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Create</button>
+                    <button type="button" class="btn btn-primary" id="create-room">Create</button>
                 </div>
             </div>
         </div>
@@ -110,8 +109,8 @@
             </p>
           </div>
           <div class="text-center col-sm-12 col-md-12 col-lg-6">
-            <img class="chat-image-main" src="assets/images/sza.jpg" /><br />
-            <img class="button" src="assets/images/play_button_sm.png" />
+            <img id="artist-image" class="chat-image-main" /><br />
+            <img class="button" />
           </div>
       </div> 
       </div>
@@ -175,5 +174,6 @@
         </div>
     </div>
     </div>
+  <script src="assets/javascript/main.js"></script>
 </body>
 </html>

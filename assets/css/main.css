@@ -2,7 +2,9 @@ body{
 	background-color: black;
 	color:hsla(0, 100%, 100%, .88);
 /*	color: #044A0B;*/
-  background-image: url(../images/dj.jpg)
+  background-image: url(../images/dj.jpg);
+  background-repeat: no-repeat;
+  
 }
 
 
@@ -156,6 +158,17 @@ input:checked + .slider:before {
   
   position: relative;
   bottom: 75px;
+}
+
+
+
+
+/****************
+YOUTUBE STYLE
+****************/
+.create-chat {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 /****************
