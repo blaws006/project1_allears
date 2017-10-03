@@ -15,7 +15,7 @@
 
 	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css"> 
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/altcss.css"> -->
+
 
 	<!-- Firebase database modules -->
 	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
@@ -76,6 +76,7 @@
                     <h4 class="modal-title modal-inline-text" id="purchaseLabel">Groove Room</h4>
                 </div>
                 <div class="modal-body">
+
                     <div class="form-group">                    
             <p class="modal-inline-text">Prepare to enter a Groove Room, others will soon follow and your world of discovering crunchy new grooves will begin.</p>
             <label class="modal-inline-text" for="usr">Enter Song</label> 
@@ -86,13 +87,22 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" id="create-room">Create</button>
+
+                    <div class="form-group">
+                        <p class="modal-inline-text">Prepare to enter a Groove Room, others will soon follow and your world of discovering crunchy new grooves will begin.</p>
+                        <label class="modal-inline-text" for="usr">Enter Song</label>
+                        <input type="text" class="form-control" id="initialSong">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="create">Create</button>
                 </div>
             </div>
         </div>
     </div>
 <!-- Create Groove Room Modal -->
 
-<!-- main nav -->
   <div class="row">
     <div class="container">
       <div class="col-sm-12 col-md-12 col-lg-8">
@@ -174,6 +184,59 @@
         </div>
     </div>
     </div>
-  <script src="assets/javascript/main.js"></script>
+    <!-- Create Groove Room Modal -->
+    <!-- User sign up modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title modal-inline-text">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="modal-inline-text" for="usr">Username</label>
+                        <input type="text" class="form-control" id="usernameInput">
+                        <label class="modal-inline-text" for="usr">Password</label>
+                        <input type="password" class="form-control" id="passwordInput">
+                        <label class="modal-inline-text" for="usr">Confirm Password</label>
+                        <input type="password" class="form-control" id="passwordConfirmInput">
+                        <label class="modal-inline-text" for="usr">Email</label>
+                        <input type="text" class="form-control" id="emailInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="signUpButton">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- User sign up modal -->
+    <!-- Login modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title modal-inline-text">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="modal-inline-text" for="usr">Username</label>
+                        <input type="text" class="form-control" id="usernameLoginInput">
+                        <label class="modal-inline-text" for="usr">Password</label>
+                        <input type="password" class="form-control" id="passwordLoginInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="loginButton">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="assets/javascript/index.js"></script>
 </body>
 </html>
