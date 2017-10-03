@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Firebase database modules -->
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <title>All Ears</title>
+</head>
+
+<body style="background-image:url(images/Maximum4.jpg);">
+    <!-- main nav -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">All Ears</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a id="about" href="about.html">About</a></li>
+                     <li><a  href="chatroom.html">Chat Rooms</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="modal" data-target="#signUpModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li>
+                        <!-- Rounded switch -->
+                        <a href="#">
+              <span>
+            <label class="switch">
+              <input type="checkbox" id="darkModeSlider">
+              <span class="slider round"></span>
+            </label>
+          </span>
+        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- main nav -->
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="primary-jumbotron" class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">All Ears</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p>
+                <button type="button" style="background-color:black" class="btn btn-primary btn-lg buttonShowModal" data-toggle="modal" data-target="#myModal">New Groove Room</button>
+            </p>
+        </div>
+    </div>
+    <!-- Create Groove Room Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title modal-inline-text" id="purchaseLabel">Groove Room</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <p class="modal-inline-text">Prepare to enter a Groove Room, others will soon follow and your world of discovering crunchy new grooves will begin.</p>
+                        <label class="modal-inline-text" for="usr">Enter Song</label>
+                        <input type="text" class="form-control" id="initialSong">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="create">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Create Groove Room Modal -->
+    <!-- User sign up modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title modal-inline-text">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="modal-inline-text" for="usr">Username</label>
+                        <input type="text" class="form-control" id="usernameInput">
+                        <label class="modal-inline-text" for="usr">Password</label>
+                        <input type="password" class="form-control" id="passwordInput">
+                        <label class="modal-inline-text" for="usr">Confirm Password</label>
+                        <input type="password" class="form-control" id="passwordConfirmInput">
+                        <label class="modal-inline-text" for="usr">Email</label>
+                        <input type="text" class="form-control" id="emailInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="signUpButton">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- User sign up modal -->
+    <!-- Login modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title modal-inline-text">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="modal-inline-text" for="usr">Username</label>
+                        <input type="text" class="form-control" id="usernameLoginInput">
+                        <label class="modal-inline-text" for="usr">Password</label>
+                        <input type="password" class="form-control" id="passwordLoginInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="loginButton">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login modal -->
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2 style="color:black">Heading</h2>
+                <p style="color:black">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn btn-primary btn-md no-visit-change" href="#" role="button">Join &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2 style="color:black">Heading</h2>
+                <p style="color:black">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn btn-primary btn-md no-visit-change" href="#" role="button">Join &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2 style="color:black">Heading</h2>
+                <p style="color:black">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p><a class="btn btn-primary btn-md no-visit-change" href="#" role="button">Join &raquo;</a></p>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; Company 2017</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
