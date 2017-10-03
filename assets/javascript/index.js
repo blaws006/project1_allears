@@ -39,10 +39,10 @@ $(function() {
 
     var link = null;
     if (toggleStatus === true) {
-        link = createLinkElement('secondary-style.css');
+        link = createLinkElement('assets/css/secondary-style.css');
 
     } else {
-        link = createLinkElement('primary-style.css');
+        link = createLinkElement('assets/css/primary-style.css');
     }
 
     $("head").append(link);
@@ -55,9 +55,9 @@ $(function() {
         localStorage.setItem('toggle', this.checked);
         if (this.checked === true) {
             // load secondary-style.css
-            link = createLinkElement('secondary-style.css');
+            link = createLinkElement('assets/css/secondary-style.css');
         } else {
-            link = createLinkElement('primary-style.css');
+            link = createLinkElement('assets/css/primary-style.css');
         }
 
         stylesheet.remove();
