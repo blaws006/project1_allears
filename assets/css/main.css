@@ -3,13 +3,11 @@ body{
 	color:hsla(0, 100%, 100%, .88);
 /*	color: #044A0B;*/
   background-image: url(../images/dj.jpg);
- 
+    background-size: auto 100%;
+
 }
 
-#home {
-  
-   background-size: auto 100%;
-}
+
 
 .no-visit-change:visited {
 	background-color:#222;
@@ -317,4 +315,29 @@ CHAT-ROOM STYLE
 LYRIC STYLE
 ****************/
 
-.
+.lyrics-section {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lyrics {
+  min-width: 300px;
+  height: 315px;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 3px #ccc;
+   overflow-x: hidden;
+  overflow-y: scroll;
+  color: #000000;
+  font-size: 14px;
+}
+
+/****************
+LYRIC STYLE
+****************/
+
+
+.stubhub-section {
+   background-color: rgba(0, 0, 0, 0.5);
+}

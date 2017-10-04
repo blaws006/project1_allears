@@ -16,6 +16,8 @@ console.log("Hello World!");
 
  		$("#artist-image").attr("src", response.performers[0].image);
  		console.log(response.performers[0].image);
+      
+      $(".findTickets").addClass("href", response[0].url)
  	});
 
  });
