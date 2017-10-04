@@ -3,11 +3,13 @@ body{
 	color:hsla(0, 100%, 100%, .88);
 /*	color: #044A0B;*/
   background-image: url(../images/dj.jpg);
-  background-repeat: no-repeat;
-  
+ 
 }
 
-
+#home {
+  
+   background-size: auto 100%;
+}
 
 .no-visit-change:visited {
 	background-color:#222;
