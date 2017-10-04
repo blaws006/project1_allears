@@ -1,8 +1,11 @@
 body {
-	background: black
+
+	background-image: url(../images/maxresdefault.jpg);
+ 
 }
 
+
 #primary-jumbotron {
-	opacity: 0.9 
+	opacity: 0.5 
 }
 
